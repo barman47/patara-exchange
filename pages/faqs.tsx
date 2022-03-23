@@ -1,4 +1,4 @@
-import { Accordion, AccordionSummary, AccordionDetails, Box, Grid, Paper, Typography } from '@mui/material';
+import { Accordion, AccordionSummary, AccordionDetails, Box, Typography } from '@mui/material';
 import Layout from 'components/layout';
 import type { NextPage } from 'next';
 import { makeStyles } from '@mui/styles';
@@ -52,6 +52,10 @@ const useStyles = makeStyles((theme: Theme) => ({
         // boxShadow: 'none !important',
         marginBottom: theme.spacing(5)
     },
+
+    accordionContent: {},
+    summary: {},
+    text: {},
 
     contact: {
         display: 'grid',

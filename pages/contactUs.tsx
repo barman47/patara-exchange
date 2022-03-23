@@ -6,7 +6,7 @@ import { Theme } from '@mui/material/styles';
 import { EmailOutline, PhoneInTalkOutline, Whatsapp } from 'mdi-material-ui';
 
 import ContactForm from 'components/common/ContactForm';
-import Toast from 'components/common/Toast';
+// import Toast from 'components/common/Toast';
 
 const useStyles = makeStyles((theme: Theme) => ({
     root: {
