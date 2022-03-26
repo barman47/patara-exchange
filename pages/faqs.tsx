@@ -98,7 +98,7 @@ const Faqs: NextPage = (): JSX.Element => {
                 <Box component="div" className={classes.questions}>
                     <Accordion className={classes.accordion}>
                         <AccordionSummary className={classes.summary} expandIcon={<ChevronUp />}>
-                            <Typography variant="h6" className={classes.heading}>First Question</Typography>
+                            <Typography variant="h6" className={classes.heading}>Who can sign up?</Typography>
                         </AccordionSummary>
                         <AccordionDetails className={classes.accordionContent}>
                             <Typography className={classes.text}>We connect cryptocurrency traders with a wide a range of global financial markets through one single account in a safe, easy and secure environment.</Typography>
@@ -106,7 +106,7 @@ const Faqs: NextPage = (): JSX.Element => {
                     </Accordion>
                     <Accordion className={classes.accordion}>
                         <AccordionSummary className={classes.summary} expandIcon={<ChevronUp />}>
-                            <Typography variant="h6" className={classes.heading}>First Question</Typography>
+                            <Typography variant="h6" className={classes.heading}>Which Stores/Businesses can you collect payments for?</Typography>
                         </AccordionSummary>
                         <AccordionDetails className={classes.accordionContent}>
                             <Typography className={classes.text}>We connect cryptocurrency traders with a wide a range of global financial markets through one single account in a safe, easy and secure environment.</Typography>
@@ -114,7 +114,7 @@ const Faqs: NextPage = (): JSX.Element => {
                     </Accordion>
                     <Accordion className={classes.accordion}>
                         <AccordionSummary className={classes.summary} expandIcon={<ChevronUp />}>
-                            <Typography variant="h6" className={classes.heading}>First Question</Typography>
+                            <Typography variant="h6" className={classes.heading}>I do not have a bank account. Do you have a physical location for cash pickup?</Typography>
                         </AccordionSummary>
                         <AccordionDetails className={classes.accordionContent}>
                             <Typography className={classes.text}>We connect cryptocurrency traders with a wide a range of global financial markets through one single account in a safe, easy and secure environment.</Typography>
@@ -122,15 +122,7 @@ const Faqs: NextPage = (): JSX.Element => {
                     </Accordion>
                     <Accordion className={classes.accordion}>
                         <AccordionSummary className={classes.summary} expandIcon={<ChevronUp />}>
-                            <Typography variant="h6" className={classes.heading}>First Question</Typography>
-                        </AccordionSummary>
-                        <AccordionDetails className={classes.accordionContent}>
-                            <Typography className={classes.text}>We connect cryptocurrency traders with a wide a range of global financial markets through one single account in a safe, easy and secure environment.</Typography>
-                        </AccordionDetails>
-                    </Accordion>
-                    <Accordion className={classes.accordion}>
-                        <AccordionSummary className={classes.summary} expandIcon={<ChevronUp />}>
-                            <Typography variant="h6" className={classes.heading}>First Question</Typography>
+                            <Typography variant="h6" className={classes.heading}>What is the rate today?</Typography>
                         </AccordionSummary>
                         <AccordionDetails className={classes.accordionContent}>
                             <Typography className={classes.text}>We connect cryptocurrency traders with a wide a range of global financial markets through one single account in a safe, easy and secure environment.</Typography>

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { AppBar, Box, SwipeableDrawer, IconButton, Link, List, ListItem, ListItemIcon, ListItemText, Toolbar } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { Theme } from '@mui/material/styles';
-import { Home, InformationVariant, Phone, Help, Menu } from 'mdi-material-ui';
+import { Headset, Home, InformationVariant, Phone, Help, Menu } from 'mdi-material-ui';
 
 import { ABOUT_US, CONTACT_US, FAQs } from 'src/routes'
 import { COLORS, Route } from 'src/utils/constants';
@@ -35,10 +35,20 @@ const useStyles = makeStyles((theme: Theme) => ({
         width: '100%'
     },
 
-    logo: {
-        cursor: 'pointer',
-        width: theme.spacing(10)
+    logoContainer: {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center'
     },
+
+    logo: {
+        marginLeft: theme.spacing(2),
+        width: '15%'
+    },
+    
+    // logo: {
+    //     width: '50%'
+    // },
 
     links: {
         backgroundColor: theme.palette.primary.dark,
@@ -60,11 +70,17 @@ const useStyles = makeStyles((theme: Theme) => ({
     activeLink: {},
 
     menuIcon: {
-        border: `1px solid ${theme.palette.primary.main}`,
         borderRadius: theme.shape.borderRadius,
-        fontSize: theme.spacing(6),
-        padding: theme.spacing(0.5),
+        fontSize: theme.spacing(4),
+        padding: theme.spacing(0.2),
         color: theme.palette.primary.main,
+    },
+
+    contactIcon: {
+        borderRadius: theme.shape.borderRadius,
+        fontSize: theme.spacing(4),
+        padding: theme.spacing(0.2),
+        color: COLORS.offBlack
     },
 
     icon: {
@@ -75,11 +91,13 @@ const useStyles = makeStyles((theme: Theme) => ({
 interface Classes {
     root: string;
     header: string;
+    logoContainer: string;
     logo: string;
     links: string;
     link: string;
     activeLink: string;
     menuIcon: string;
+    contactIcon: string;
     icon: string;
 }
 
@@ -107,17 +125,22 @@ const MobileHeader: React.FC = (): JSX.Element => {
             <AppBar elevation={1} className={classes.root}>
                 <Toolbar>
                     <Box component="header" className={classes.header}>
-                        <Box component="div" className={classes.logo}>
-                            <NextLink href="/" passHref>
-                                <Image
-                                    src={logo} 
-                                    alt="Patara Exchange Logo" 
-                                />
-                            </NextLink>
+                        <Box component="div" className={classes.logoContainer}>
+                            <IconButton onClick={toggleDrawer}>
+                                <Menu className={classes.menuIcon} />
+                            </IconButton>
+                            <Box component="div" className={classes.logo}>
+                                <NextLink href="/">
+                                    <Image
+                                        src={logo} 
+                                        alt="Patara Exchange Logo" 
+                                    />
+                                </NextLink>
+                            </Box>
                         </Box>
-                        <IconButton onClick={toggleDrawer}>
-                            <Menu className={classes.menuIcon} />
-                        </IconButton>
+                        <NextLink href={CONTACT_US}>
+                            <Headset className={classes.contactIcon} />
+                        </NextLink>
                     </Box>
                 </Toolbar>
                 <SwipeableDrawer

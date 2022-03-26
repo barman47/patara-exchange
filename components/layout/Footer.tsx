@@ -7,32 +7,33 @@ import { Theme } from '@mui/material/styles';
 
 import { COLORS } from 'src/utils/constants';
 
-// import background from 'src/assets/img/footer-background.png';
+import background from 'src/assets/img/footer-background.png';
 import logo from 'src/assets/img/footer-logo.png';
 import septemStacks from 'src/assets/img/septem-logo.png';
 import { React } from 'mdi-material-ui';
 
 const useStyles = makeStyles((theme: Theme) => ({
     root: {
-        backgroundColor: '#163837'
+        backgroundImage: `url(${background.src})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
     },
 
     footer: {
-        // backgroundImage: `url(${background})`,
-        // backgroundSize: 'cover',
-        // backgroundPosition: 'center',
-        // backgroundRepeat: 'no-repeat',
         display: 'grid',
         gridTemplateColumns: '1fr 4fr',
         gap: theme.spacing(10),
-        // alignItems: 'center',
-        // width: '100vw',
         padding: theme.spacing(5),
 
         [theme.breakpoints.down('sm')]: {
             gap: theme.spacing(2),
             gridTemplateColumns: '1fr',
             padding: theme.spacing(3)
+        },
+
+        '& section:first-child': {
+            justifySelf: 'center'
         }
     },
 
@@ -78,7 +79,8 @@ const useStyles = makeStyles((theme: Theme) => ({
 
     copyrightText: {
         [theme.breakpoints.down('sm')]: {
-            fontSize: theme.spacing(1.5)
+            fontSize: theme.spacing(1.5),
+            marginBottom: theme.spacing(2)
         },
     },
 
