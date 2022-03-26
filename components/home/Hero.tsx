@@ -14,11 +14,12 @@ import form from 'src/assets/img/trade-form.png';
 const useStyles = makeStyles((theme: Theme) => ({
     root: {
         background: 'linear-gradient(252.77deg, #163837 0.72%, #189A92 100%)',
-        marginTop: theme.spacing(11),
+        marginTop: theme.spacing(8),
         maxWidth: '100vw',
         padding: theme.spacing(0, 5),
 
         [theme.breakpoints.down('sm')]: {
+            marginTop: theme.spacing(7),
             padding: theme.spacing(0, 2),
         }
     },

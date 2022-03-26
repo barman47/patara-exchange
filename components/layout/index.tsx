@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { Box } from '@mui/material';
 
 import Header from 'components/layout/Header';
+import Footer from 'components/layout/Footer';
 
 interface Props {
     children: React.ReactElement | React.ReactElement[];
@@ -16,6 +17,7 @@ const  Layout: FC<Props> = ({ children }: Props): JSX.Element => {
             <Box component="main">
                 {children}
             </Box>
+            <Footer />
         </>
     );
 }

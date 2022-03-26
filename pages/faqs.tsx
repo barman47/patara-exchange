@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme: Theme) => ({
             },
 
             [theme.breakpoints.down('sm')]: {
-                fontSize: theme.spacing(2)
+                fontSize: theme.spacing(2.5)
             }
         },
 
@@ -41,7 +41,11 @@ const useStyles = makeStyles((theme: Theme) => ({
 
     heading: {
         color: theme.palette.primary.main,
-        fontWeight: 700
+        fontWeight: 700,
+
+        [theme.breakpoints.down('sm')]: {
+            fontSize: theme.spacing(1.8)
+        }
     },
 
     questions: {
@@ -62,6 +66,10 @@ const useStyles = makeStyles((theme: Theme) => ({
         gridTemplateColumns: '1fr 1fr',
         gap: theme.spacing(5),
         alignItems: 'center',
+
+        [theme.breakpoints.down('md')]: {
+            gridTemplateColumns: '1fr',
+        },
 
         '& h4': {
             marginBottom: theme.spacing(4)

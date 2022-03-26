@@ -2,42 +2,46 @@ import { FC } from 'react';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import { Box, Button, Link } from '@mui/material';
+import { AppBar, Box, Button, Link, Toolbar } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import { Theme, useTheme } from '@mui/material/styles';
-import { AppBar, Toolbar } from '@mui/material';
+import { Theme } from '@mui/material/styles';
 import clsx from 'clsx';
 
 import { ABOUT_US, CONTACT_US, FAQs } from 'src/routes'
 import { COLORS, Route } from 'src/utils/constants';
 
 import HideOnScroll from 'components/layout/HideOnScroll';
+import MobileHeader from './MobileHeader';
 
 import logo from 'src/assets/img/logo.png';
 
 const useStyles = makeStyles((theme: Theme) => ({
     root: {
-        border: '1px solid red',
+        backgroundColor: COLORS.white,
+        display: 'grid',
+        gridTemplateColumns: '1fr',
+        alignItems: 'center',
         width: '100vw',
+
+        [theme.breakpoints.down('md')]: {
+            display: 'none'
+        }
     },
 
     header: {
-        border: '1px solid blue',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        // display: 'grid',
-        // gridTemplateColumns: '0.5fr 2fr 0.5fr',
         alignItems: 'center',
         width: '100%'
     },
 
     logo: {
-        border: '5px solid red',
+        cursor: 'pointer',
+        width: theme.spacing(10)
     },
 
     links: {
-        border: '1px solid green',
         display: 'grid',
         gridTemplateColumns: 'repeat(4, 1fr)',
         width: '60%'
@@ -47,7 +51,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         color: COLORS.offBlack,
         cursor: 'pointer',
         fontSize: theme.spacing(2),
-        fontWeight: 500,
+        fontWeight: 600,
         textDecoration: 'none',
         transition: '0.3s linear all',
         textAlign: 'center',
@@ -71,7 +75,6 @@ interface Classes {
 
 const Header: FC = (): JSX.Element => {
     const classes: Classes = useStyles();
-    const theme = useTheme();
     const { pathname } = useRouter();
 
     const routes: Array<Route> = [
@@ -82,37 +85,36 @@ const Header: FC = (): JSX.Element => {
     ];
 
     return (
-        <HideOnScroll>
-        {/* <HideOnScroll {...props}> */}
-            <AppBar elevation={0} className={classes.root} color="transparent">
-                <Toolbar>
-                    <Box component="header" className={classes.header}>
-                        <NextLink href="/" passHref>
-                            <Image
-                                src={logo} 
-                                alt="Patara Exchange Logo" 
-                                className={classes.logo} 
-                                width={theme.spacing(10)} 
-                                height={theme.spacing(10)}
-                                // layout="responsive"
-                            />
-                        </NextLink>
-                        <Box component="div" className={classes.links}>
-                            {routes.map((route, index) =>(
-                                <NextLink key={index} href={route.url} passHref>
-                                    <Link className={clsx(classes.link, { [classes.activeLink]: pathname.includes(route.url) })}underline="none">{route.text}</Link>
+        <>
+            <HideOnScroll>
+                <AppBar elevation={1} className={classes.root}>
+                    <Toolbar>
+                        <Box component="header" className={classes.header}>
+                            <Box component="div" className={classes.logo}>
+                                <NextLink href="/" passHref>
+                                    <Image
+                                        src={logo} 
+                                        alt="Patara Exchange Logo" 
+                                    />
                                 </NextLink>
-                            ))}
+                            </Box>
+                            <Box component="div" className={classes.links}>
+                                {routes.map((route, index) =>(
+                                    <NextLink key={index} href={route.url} passHref>
+                                        <Link className={clsx(classes.link, { [classes.activeLink]: pathname.includes(route.url) })}underline="none">{route.text}</Link>
+                                    </NextLink>
+                                ))}
+                            </Box>
+                            <NextLink href="/login" passHref>
+                                <Button variant="contained">Get Started</Button>
+                            </NextLink>
                         </Box>
-                        <NextLink href="/login" passHref>
-                            <Button variant="contained">Get Started Now Now Now</Button>
-                        </NextLink>
-                        
-                    </Box>
-                </Toolbar>
-            </AppBar>
-        </HideOnScroll>
+                    </Toolbar>
+                </AppBar>
+            </HideOnScroll>
+            <MobileHeader />
+        </>
     );
 };
 
-export default Header
+export default Header;

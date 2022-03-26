@@ -2,7 +2,8 @@ export const TRANSITION = '0.3s linear all';
 
 export type Route = {
     url: string,
-    text: string
+    text: string,
+    icon?: React.ReactElement
 }
 
 export const COLORS = {
