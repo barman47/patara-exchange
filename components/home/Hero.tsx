@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import NextLink from 'next/link';
 import Image from 'next/image';
 import { Box, Button, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';

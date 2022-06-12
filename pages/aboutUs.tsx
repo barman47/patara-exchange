@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import Layout from 'components/layout';
-import { Avatar, Box, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { Theme } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
 import { Binoculars, BullseyeArrow } from 'mdi-material-ui';
@@ -9,7 +9,7 @@ import { Binoculars, BullseyeArrow } from 'mdi-material-ui';
 import { TRANSITION } from 'src/utils/constants';
 
 import about from 'src/assets/img/about.png';
-import avatar from 'src/assets/img/avatar.jpg';
+// import avatar from 'src/assets/img/avatar.jpg';
 import img1 from 'src/assets/img/about1.png';
 import img2 from 'src/assets/img/about2.png';
 import img3 from 'src/assets/img/about3.png';

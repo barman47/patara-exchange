@@ -1,6 +1,5 @@
 import { FC } from 'react';
-import Image from 'next/image';
-import { Box, Stack, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { Theme } from '@mui/material/styles';
 
@@ -32,7 +31,7 @@ const Map: FC = (): JSX.Element => {
                 referrerPolicy="no-referrer-when-downgrade"
                 className={classes.map}
             >
-                </iframe>
+            </iframe>
         </Box>
     );
 };
