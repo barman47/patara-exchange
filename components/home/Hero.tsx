@@ -6,6 +6,7 @@ import { makeStyles } from '@mui/styles';
 import { Theme, useTheme } from '@mui/material/styles';
 
 import { COLORS } from 'src/utils/constants';
+import { sendWhatsappMessage } from 'src/utils/sendWhatsappMessage';
 
 import heroBottom from 'src/assets/img/hero-bottom.png';
 import heroTop from 'src/assets/img/hero-top.png';
@@ -94,17 +95,18 @@ const Hero: FC = (): JSX.Element => {
                 <Box component="div" className={classes.textContainer}>
                     <Typography variant="h2" color="primary">Trade your <span style={{ color: theme.palette.primary.light }} >crypto</span><br /> instantly!</Typography>
                     <Typography variant="h6">Trade between cryptocurrencies, stablecoins <br />and environmental assets in one easy step.</Typography>
-                    <NextLink href="/login" passHref>
+                    {/* <NextLink href="/login" passHref> */}
                         <Button 
                             variant="contained" 
                             color="secondary" 
                             className={classes.button}
                             disableElevation
                             size="large"
+                            onClick={sendWhatsappMessage}
                         >
-                            Get Started
+                            Trade Now
                         </Button>
-                    </NextLink>
+                    {/* </NextLink> */}
                     <Box component="div">
                         <Image 
                             src={heroBottom}

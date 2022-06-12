@@ -79,27 +79,27 @@ const Why: FC = (): JSX.Element => {
     return (
         <Box component="section" className={classes.root}>
             <Typography variant="h4" color="primary">Why trade with us?</Typography>
-            <Typography variant="h6">We connect cryptocurrency traders with a wide a range of global financial markets through one single account in a safe, easy and secure environment</Typography>
+            <Typography variant="h6">We provide a user friendly platform for cryptocurrency trading that is globally available, secured, and reliable.</Typography>
             <Box component="section" className={classes.reasons}>
                 <Box component="div" className={classes.reason}>
                     <CashRemove className={classes.icon} />
                     <Typography variant="h5">No Hidden Fees</Typography>
-                    <Typography variant="body1" component="p">We connect cryptocurrency traders with a wide a range of global financial markets through one single account in a safe, easy and secure environment</Typography>
+                    <Typography variant="body1" component="p">We provide a platform that facilitates transparency and accountability while trading</Typography>
                 </Box>
                 <Box component="div" className={classes.reason}>
                     <Security className={classes.icon} />
                     <Typography variant="h5">Secure &amp; Trusted</Typography>
-                    <Typography variant="body1" component="p">We connect cryptocurrency traders with a wide a range of global financial markets through one single account in a safe, easy and secure environment</Typography>
+                    <Typography variant="body1" component="p">Our platform has built in security measures to guarantee users protection</Typography>
                 </Box>
                 <Box component="div" className={classes.reason}>
                     <GiftOffOutline className={classes.icon} />
                     <Typography variant="h5">Earn Rewards</Typography>
-                    <Typography variant="body1" component="p">We connect cryptocurrency traders with a wide a range of global financial markets through one single account in a safe, easy and secure environment</Typography>
+                    <Typography variant="body1" component="p">We provide time framed activities and promotions that enable eligible users earn Rewards for additional gains.</Typography>
                 </Box>
                 <Box component="div" className={classes.reason}>
                     <ChartBar className={classes.icon} />
                     <Typography variant="h5">Profit in Crypto</Typography>
-                    <Typography variant="body1" component="p">We connect cryptocurrency traders with a wide a range of global financial markets through one single account in a safe, easy and secure environment</Typography>
+                    <Typography variant="body1" component="p">This platform provides a means for users to trade and make profits from different cryptocurrencies</Typography>
                 </Box>
             </Box>
         </Box>

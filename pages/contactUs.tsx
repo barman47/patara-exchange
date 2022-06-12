@@ -5,6 +5,8 @@ import { makeStyles } from '@mui/styles';
 import { Theme } from '@mui/material/styles';
 import { EmailOutline, PhoneInTalkOutline, Whatsapp } from 'mdi-material-ui';
 
+import { sendWhatsappMessage } from 'src/utils/sendWhatsappMessage';
+
 import ContactForm from 'components/common/ContactForm';
 // import Toast from 'components/common/Toast';
 
@@ -54,7 +56,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        padding: theme.spacing(5)  
+        padding: theme.spacing(5)
     },
 
     icon: {
@@ -96,13 +98,13 @@ const Contact: NextPage = (): JSX.Element => {
                             </Paper>
                         </Grid>
                         <Grid item xs={12} lg={4}>
-                            <Paper component="a" href="mailto:hello@pataraexchange.com" className={classes.contact} elevation={2}>
+                            <Paper component="a" href="mailto:info@pataraexchange.com" className={classes.contact} elevation={2}>
                                 <EmailOutline className={classes.icon} />
-                                <Typography variant="h6">hello@pataraexchange.com</Typography>
+                                <Typography variant="h6">info@pataraexchange.com</Typography>
                             </Paper>
                         </Grid>
                         <Grid item xs={12} lg={4}>
-                            <Paper className={classes.contact} elevation={2}>
+                            <Paper className={classes.contact} elevation={2} onClick={sendWhatsappMessage}>
                                 <Whatsapp className={classes.icon} />
                                 <Typography variant="h6">+2348147233059</Typography>
                             </Paper>

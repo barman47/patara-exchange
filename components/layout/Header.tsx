@@ -9,6 +9,7 @@ import clsx from 'clsx';
 
 import { ABOUT_US, CONTACT_US, FAQs } from 'src/routes'
 import { COLORS, Route } from 'src/utils/constants';
+import { sendWhatsappMessage } from 'src/utils/sendWhatsappMessage';
 
 import HideOnScroll from 'components/layout/HideOnScroll';
 import MobileHeader from './MobileHeader';
@@ -105,8 +106,8 @@ const Header: FC = (): JSX.Element => {
                                     </NextLink>
                                 ))}
                             </Box>
-                            <NextLink href="/login" passHref>
-                                <Button variant="contained">Get Started</Button>
+                            <NextLink href="#!">
+                                <Button variant="contained" onClick={sendWhatsappMessage}>Trade Now</Button>
                             </NextLink>
                         </Box>
                     </Toolbar>

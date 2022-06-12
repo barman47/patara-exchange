@@ -309,7 +309,7 @@ const AboutUs: NextPage = (): JSX.Element => {
                         <Typography variant="h6">Our Mission is to provide a borderless and trustless online payment platform where users can send and receive crypto and fiat payments across borders without any restrictions.</Typography>
                     </Box>
                 </Box>
-                <Typography variant="h4" color="primary" className={classes.teamHeader}>Meet our Team</Typography>
+                {/* <Typography variant="h4" color="primary" className={classes.teamHeader}>Meet our Team</Typography>
                 <Box component="section" className={classes.team}>
                     <Box className={classes.avatar}>
                         <Avatar
@@ -347,7 +347,7 @@ const AboutUs: NextPage = (): JSX.Element => {
                         <Typography variant="h6" color="primary">Austine Theory</Typography>
                         <Typography variant="body2" component="p">CEO</Typography>
                     </Box>
-                </Box>
+                </Box> */}
             </Box>
 		</Layout>
 	)

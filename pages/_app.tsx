@@ -4,6 +4,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider } from '@emotion/react';
 import { ThemeProvider } from '@mui/material/styles';
 import createEmotionCache from '../src/createEmotionCache';
+import { Toaster } from 'react-hot-toast';
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -18,6 +19,7 @@ function MyApp({ Component, emotionCache = clientSideEmotionCache, pageProps }: 
 //   return <Component {...pageProps} />
   	return (
 		<>
+			<Toaster />
 			<Head>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<meta name="theme-color" content="#168F88" />

@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import Head from 'next/head';
 import { Box } from '@mui/material';
 
 import Header from 'components/layout/Header';
@@ -10,9 +11,13 @@ interface Props {
     description?: string;
 }
 
-const  Layout: FC<Props> = ({ children }: Props): JSX.Element => {
+const  Layout: FC<Props> = ({ children, description, title }: Props): JSX.Element => {
     return (
         <>
+            <Head>
+                {title ? <title>{title} | Patara Exchange</title> : <title>Patara Exchange</title>}
+                {description && <title>{description}</title>}
+            </Head>
             <Header />
             <Box component="main">
                 {children}

@@ -101,33 +101,33 @@ const Faqs: NextPage = (): JSX.Element => {
                             <Typography variant="h6" className={classes.heading}>Who can sign up?</Typography>
                         </AccordionSummary>
                         <AccordionDetails className={classes.accordionContent}>
-                            <Typography className={classes.text}>We connect cryptocurrency traders with a wide a range of global financial markets through one single account in a safe, easy and secure environment.</Typography>
+                            <Typography className={classes.text}>Anyone human looking for the best rates to swap their crypto for fiat. </Typography>
                         </AccordionDetails>
                     </Accordion>
                     <Accordion className={classes.accordion}>
                         <AccordionSummary className={classes.summary} expandIcon={<ChevronUp />}>
-                            <Typography variant="h6" className={classes.heading}>Which Stores/Businesses can you collect payments for?</Typography>
+                            <Typography variant="h6" className={classes.heading}>I have a business and I want to start accepting crypto payments can you help me?</Typography>
                         </AccordionSummary>
                         <AccordionDetails className={classes.accordionContent}>
-                            <Typography className={classes.text}>We connect cryptocurrency traders with a wide a range of global financial markets through one single account in a safe, easy and secure environment.</Typography>
+                            <Typography className={classes.text}>We currently accept crypto payments for over 100 stores/businesses at our registered locations and pay them instantly in cash or to their bank accounts if you would like us to support you accept crypto in your business email us here  info@pataraechange.com</Typography>
                         </AccordionDetails>
                     </Accordion>
                     <Accordion className={classes.accordion}>
                         <AccordionSummary className={classes.summary} expandIcon={<ChevronUp />}>
-                            <Typography variant="h6" className={classes.heading}>I do not have a bank account. Do you have a physical location for cash pickup?</Typography>
+                            <Typography variant="h6" className={classes.heading}>Can we do a face to face transaction i want my crypto paid out to me in cash?</Typography>
                         </AccordionSummary>
                         <AccordionDetails className={classes.accordionContent}>
-                            <Typography className={classes.text}>We connect cryptocurrency traders with a wide a range of global financial markets through one single account in a safe, easy and secure environment.</Typography>
+                            <Typography className={classes.text}>Yes we do. Check our contact us page to find out the location nearest to you for cash pickup</Typography>
                         </AccordionDetails>
                     </Accordion>
-                    <Accordion className={classes.accordion}>
+                    {/* <Accordion className={classes.accordion}>
                         <AccordionSummary className={classes.summary} expandIcon={<ChevronUp />}>
                             <Typography variant="h6" className={classes.heading}>What is the rate today?</Typography>
                         </AccordionSummary>
                         <AccordionDetails className={classes.accordionContent}>
                             <Typography className={classes.text}>We connect cryptocurrency traders with a wide a range of global financial markets through one single account in a safe, easy and secure environment.</Typography>
                         </AccordionDetails>
-                    </Accordion>
+                    </Accordion> */}
                 </Box>
                 <Box component="div" className={classes.contact}>
                     <Box component="div">

@@ -58,7 +58,7 @@ const CustomerBase: FC = (): JSX.Element => {
         <Box component="section" className={classes.root}>
             <Box component="div" className={classes.customers}>
                 <Typography variant="h4" color="primary">Our Customer base is worldwide</Typography>
-                <Typography variant="h6">Trade between cryptocurrencies, stablecoins and environmental assets in one easy step.</Typography>
+                <Typography variant="h6">Trade comfortably from any part of the world</Typography>
                 <Box component="section" className={classes.stats}>
                     <Box component="div">
                         <Typography variant="h3" color="secondary">21M+</Typography>
