@@ -10,7 +10,10 @@ import Map from 'components/home/Map';
 
 const Home: NextPage = (): JSX.Element => {
 	return (
-		<Layout title="Patara Exchange">
+		<Layout 
+			title="Patara Exchange"
+			description="We are a cutting-edge crypto payment processing company, providing cross-border transactions with enticing rates. Learn more about Patara Exchange here"
+		>
 			<Hero />
 			<CustomerBase />
 			<Why />
